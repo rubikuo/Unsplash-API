@@ -1,0 +1,26 @@
+.topNavBar{
+  background-color: rgba(110, 151, 190, 0.452);
+}
+
+.navbar-brand .navbar-dark .navbar-nav .nav-link {
+color:rgb(41, 39, 39);
+}
+.navbar-brand:visited .navbar-dark:visited .navbar-nav:visited .nav-link:visited {
+  color: grey;
+  text-decoration: none;
+}
+
+.navbar-brand:hover .navbar-dark:hover .navbar-nav:hover .nav-link:hover {
+  color:rgb(252, 248, 248);
+  }
+
+  .navbar-brand:active .navbar-dark:active .navbar-nav:active .nav-link:active {
+    color: grey;
+
+  }
+
+  .navtxt {
+    font-size: 1.2rem;
+  }
+
+

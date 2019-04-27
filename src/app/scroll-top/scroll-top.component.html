@@ -1,0 +1,9 @@
+<!--Scroll to top-->
+
+  <button [ngClass]="{'show-scroll': showScroll}" (click)="scrollToTop()" class="scroll-to-top btn btn-light bg-transparent">
+ <i class="fas fa-arrow-circle-up "></i>
+  </button>
+
+<!--In the above code, we have created a div with class scroll-to-top and uses a conditional class with [ngClass] which is a built-in directive of angular. This directive will add show-scrollTop class to this div if windowScrolled variables value is true. Which we will set programmatically in the component.ts file.
+
+Now inside the scroll-to-top div we have created a button which has an up icon inside it. And we have used a click event binding on the button with (click) and triggered a function called scrollTop() with it.-->

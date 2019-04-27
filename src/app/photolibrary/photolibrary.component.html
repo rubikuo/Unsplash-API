@@ -1,0 +1,43 @@
+
+<div class="container mt-4">
+  <h1 class="text-center pt-4">Photolibrary</h1>
+  <div class="mt-2">
+    <form #myForm="ngForm" (ngSubmit)="getDataFromService(myForm)" class="d-flex justify-content-center mt-3" id="top">
+     <input type="text" [(ngModel)]="searchterm" name="Name" id="search-input" placeholder="" class="mr-1">
+     <button type="submit" class="btn btn-info" ><i class="fas fa-search"></i></button>
+    </form>
+  </div>
+</div>
+
+
+
+  <article class="card-columns my-4 ">
+      <div class="card mt-3 px-2"
+        *ngFor="let data of apiData | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize" >
+        <img src="{{data.urls.regular}}" class="card-img-top mt-3" style="width:100%; height:auto;"
+          alt="{{data.description}}">
+        <div class="card-body">
+          <h5 class="card-title text-center">Photographer:<span> {{data.user.name}} </span></h5>
+          <div class="d-flex justify-content-center">
+            <a class="btn btn-primary mr-1 text-center" href="{{data.user.links.html}}" target="_blank"
+              role="button">Unsplash</a>
+            <a class="btn btn-info ml-1 text-center" href="https://www.instagram.com/{{data.user.instagram_username}}"
+              target=" _blank">Instagram</a>
+          </div>
+        </div>
+      </div>
+
+  </article>
+  <div class="container mt-5 pb-5 d-flex justify-content-center">
+  <ngb-pagination
+  [(page)]="page"
+  [pageSize]="pageSize"
+  [collectionSize]="collectionSize" *ngIf="showPagination" ></ngb-pagination>
+  </div>
+
+  <app-scroll-top></app-scroll-top>
+
+
+  <!--<p class="text-center mt-5 back-top" *ngIf='showBackToTop'>Back to Top <a href="#top"><i class="fas fa-arrow-circle-up"></i></a></p>-->
+  <!---- pageSize is to define how many pictures shown per page -->
+  <!----collectionSize is to define how many pages -->

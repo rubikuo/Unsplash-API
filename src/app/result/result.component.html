@@ -1,0 +1,15 @@
+<article class="card-columns my-5">
+  <div class="card mt-3 px-2 " *ngFor="let data of usersPhoto" > <!--loop through each article to display-->
+    <!--[] is a property binding but there is another way to write the same line:  src = '{{}}' -->
+    <img [src]="data.urls.regular|| 'http://placehold.it/300'" alt="card image" class="card-img-top mt-3"> <!--|| this means either show the src or || the http with a placeholder image with 300 pixar-->
+   <div class="card-body">
+      <p class="card-text">{{data.user.name || 'No Summary Found'}} </p>
+     <p class="card-text">{{data.description || 'No Summary Found'}}</p> <!--means either show article description or || No summary found-->
+     <!--target= "_blank" means to open a new page in a seperate tab-->
+   </div>
+  </div>
+</article>
+
+
+
+

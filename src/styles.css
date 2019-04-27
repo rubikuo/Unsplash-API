@@ -1,1 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  background:linear-gradient(0deg,rgba(194, 196, 199, 0.755),rgba(194, 196, 199, 0.755)),
+  url("https://images.unsplash.com/photo-1515096788709-a3cf4ce0a4a6?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjYxNjExfQ");
+
+      background-position: center center;
+      background-repeat:  no-repeat;
+      background-attachment: fixed;
+      background-size:  cover;
+      background-color: rgb(245, 241, 241);
+
+}

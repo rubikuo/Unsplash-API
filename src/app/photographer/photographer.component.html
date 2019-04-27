@@ -1,0 +1,7 @@
+<h1 class="text-center pt-3 pb-4">Photographer List</h1>
+<div class="list-group mb-5 ">
+  <a href="photographer/{{data.user.id}}" class="list-group-item list-group-item-action text-center" *ngFor="let data of serviceData">
+    {{data.user.name | uppercase}}
+  </a>
+
+</div>
